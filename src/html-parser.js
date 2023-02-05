@@ -1,9 +1,9 @@
+
 /*
  * Set up window for Node.js
  */
 
 var root = (typeof window !== 'undefined' ? window : {})
-
 /*
  * Parsing HTML strings
  */
@@ -38,12 +38,9 @@ function createHTMLParser () {
         return doc
       }
     } else {
+      var domino = require('domino')
       Parser.prototype.parseFromString = function (string) {
-        var doc = document.implementation.createHTMLDocument('')
-        doc.open()
-        doc.write(string)
-        doc.close()
-        return doc
+        return domino.createDocument(string)
       }
     }
   } else {
