@@ -1,6 +1,6 @@
 {
-  "name": "turndown",
-  "description": "A library that converts HTML to Markdown",
+  "name": "turndown-webworker",
+  "description": "A library that converts HTML to Markdown. Modified by Tweak4141",
   "version": "7.1.1",
   "author": "Dom Christie",
   "main": "lib/turndown.cjs.js",
@@ -36,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mixmark-io/turndown.git"
+    "url": "https://github.com/Tweak4141/turndown-webworker.git"
   },
   "scripts": {
     "build": "npm run build-cjs && npm run build-es && npm run build-umd && npm run build-iife",
