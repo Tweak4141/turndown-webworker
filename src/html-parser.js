@@ -4,6 +4,7 @@
  */
 
 var root = (typeof window !== 'undefined' ? window : {})
+import {parseHTML} from 'linkedom';
 /*
  * Parsing HTML strings
  */
@@ -38,9 +39,9 @@ function createHTMLParser () {
         return doc
       }
     } else {
-      var domino = require('domino')
       Parser.prototype.parseFromString = function (string) {
-        return domino.createDocument(string)
+        const { document } = parseHTML(string);
+        return document
       }
     }
   } else {
